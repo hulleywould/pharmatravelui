@@ -13,7 +13,7 @@ export class DrugsComponent implements OnInit, OnChanges {
   results: any = [];
   lastResult: string = "";
   domain = 'http://localhost:8080'
-  prodDomain = 'https://salty-tor-20615.herokuapp.com/';
+  prodDomain = 'https://salty-tor-20615.herokuapp.com';
 
   constructor(private httpClient: HttpClient) { }
 
