@@ -1,0 +1,12 @@
+<div class="drugsContainer">
+  <mat-card class="cardContainer" *ngIf="results.length != 0">
+    <mat-list role="list" class="listCont">
+      <mat-list-item *ngFor="let result of results" role="list" class="drugText">{{result}}
+        <mat-divider *ngIf="result != lastResult"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>
+
+
+

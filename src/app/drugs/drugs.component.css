@@ -1,0 +1,14 @@
+.listCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drugText {
+    font-size: 0.7em;
+}
+
+.mat-card-content > :last-child:not(.mat-card-footer), .mat-card > :last-child:not(.mat-card-footer) {
+    margin-bottom: 0;
+    margin-top: 25px;
+}

@@ -1,0 +1,14 @@
+.logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 10;
+    left: 0;
+    z-index: 100;
+}
+

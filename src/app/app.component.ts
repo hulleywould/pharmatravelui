@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  dataObj = { name: "" , country: ""};
+
+  drugCountryChanged(event) {
+    this.dataObj = { name: event.name, country: event.country };
+    console.log(event);
+  }
+
 }

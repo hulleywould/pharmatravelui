@@ -1,0 +1,25 @@
+<div>
+    <form class="formContainer">
+        <mat-form-field class="">
+          <input type="text" matInput placeholder="Drug" aria-label="Drug" name="drug" [matAutocomplete]="auto" [formControl]="drugCtrl" required>
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let drug of filteredData | async" [value]="drug" (click)="checkState()">
+              <span>{{ drug }}</span>
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        
+        <br />
+
+        <mat-form-field class="">
+          <input type="text" matInput placeholder="Country" aria-label="Country" name="country" [matAutocomplete]="country" [formControl]="countryCtrl" required>
+          <mat-autocomplete #country="matAutocomplete">
+            <mat-option *ngFor="let cntry of filteredCountry | async" [value]="cntry" (click)="checkState()">
+              <span>{{ cntry }}</span>
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <br />
+        <button mat-raised-button color="accent" (click)="onSubmit()" [disabled]="!isEnabled">Submit</button>
+    </form>
+</div>
