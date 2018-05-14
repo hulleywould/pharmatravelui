@@ -13,6 +13,7 @@ export class DrugsComponent implements OnInit, OnChanges {
   results: any = [];
   lastResult: string = "";
   domain = 'http://localhost:8080'
+  prodDomain = 'https://salty-tor-20615.herokuapp.com/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,7 +29,7 @@ export class DrugsComponent implements OnInit, OnChanges {
   }
 
   getResults() {
-    this.httpClient.get(`${this.domain}/result/${this.data.name}/${this.data.country}`, {
+    this.httpClient.get(`${this.prodDomain}/result/${this.data.name}/${this.data.country}`, {
       observe: 'response'
     })
     .toPromise()

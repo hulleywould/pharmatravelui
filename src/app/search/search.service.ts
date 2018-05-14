@@ -4,9 +4,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class SearchService {
 
-  domain = 'http://localhost:8080'; 
-  countriesUrl = `${this.domain}/allcountries`;
-  drugsUrl = `${this.domain}/alldrugs`;
+  domain = 'http://localhost:8080';
+  prodDomain = 'https://salty-tor-20615.herokuapp.com/';
+  countriesUrl = `${this.prodDomain}/allcountries`;
+  drugsUrl = `${this.prodDomain}/alldrugs`;
 
   constructor(private http: HttpClient) { }
 
